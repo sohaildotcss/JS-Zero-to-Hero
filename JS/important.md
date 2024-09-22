@@ -8,4 +8,4 @@ From 07_ are AC
 
 Todo:
 
-- Study Type Coercion.
+- Study Type Coercion
