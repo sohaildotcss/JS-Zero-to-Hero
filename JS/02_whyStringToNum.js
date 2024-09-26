@@ -19,14 +19,15 @@ console.log(-"123"); // Output: -123
 console.log(+null); // Output: 0 (null to 0)
 console.log(-null); // Output: -0
 
+//! Tip:- if variable is first (a++) then original value is used first and then operation is done and if operator is first(++a) then operation is done first and then updated value is used.
 let gameCounter = 6;
-let x = gameCounter++;  //! Postfix Operator
+let x = gameCounter++; //! Postfix Operator
 //h first Use and then Add.
 console.log(x);
 console.log(gameCounter);
 
 let score = 2;
-let y = ++score;    //! Prefix Operator
+let y = ++score; //! Prefix Operator
 //h first Add and then Use.
 console.log(y);
 console.log(score);
