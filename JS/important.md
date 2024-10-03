@@ -1,4 +1,4 @@
-From 07\_ are ApnaCollege lectures.
+From 07_ are ApnaCollege lectures.
 
 # Notes:
 

@@ -4,8 +4,7 @@ const city = "Kurnool";
 
 const newName = new String("SHaik");
 //h type of strings created with new keyword is always an Object.
-console.log(typeof newName);
-
+console.log(typeof newName); // Object
 console.log(typeof city); // String
 
 // console.log(`Hello my name is ${name}, and my age is ${age} and i live in ${city}.`);
@@ -71,3 +70,8 @@ console.log(str1.lastIndexOf("world")); //6
 
 //* length
 console.log(text.length); //5, counting starts with 1
+
+let string1 = "@";
+let string2 = prompt("Enter your full name");
+let string3 = string2.length;
+console.log(string1.concat(string2).concat(string3));
