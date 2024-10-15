@@ -1,3 +1,8 @@
+//* Strings are immutable in JS
+let str = "Javascript";
+str[0] = "L";
+console.log(str); // Javascript
+
 const name = "Sohail";
 const age = 23;
 const city = "Kurnool";
@@ -72,6 +77,6 @@ console.log(str1.lastIndexOf("world")); //6
 console.log(text.length); //5, counting starts with 1
 
 let string1 = "@";
-let string2 = prompt("Enter your full name");
-let string3 = string2.length;
-console.log(string1.concat(string2).concat(string3));
+// let string2 = prompt("Enter your full name");
+// let string3 = string2.length;
+// console.log(string1.concat(string2).concat(string3));
