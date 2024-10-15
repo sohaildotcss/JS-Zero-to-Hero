@@ -11,6 +11,7 @@ From 07\_ are ApnaCollege lectures.
   Dividing a string with a string will give NaN. ("a" / "b" = NaN)
   Dividing a number with a string will give NaN. (2 / "a" = NaN)
 - Property(arr.length) means gives a value whereas Method(Math.round(arr)) means it does something.
+- A function cannot support multiple return statements.
 
 
 # Todo:
