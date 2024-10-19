@@ -19,4 +19,5 @@ From 07\_ are ApnaCollege lectures.
 
 - Master all Array Instance Methods.
 - Master all String Instance Methods.
+- Master Map, Filter, Reduce, and Sort.
 - Study Type Coercion

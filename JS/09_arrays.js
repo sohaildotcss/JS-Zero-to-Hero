@@ -1,5 +1,5 @@
 //* Arrays are Mutable in JS
-
+//* Example:
 // let arr = [22, 34, 8, "Sohail", 66, "*"];
 // arr[0] = 7;
 // console.log(arr); // [7, 34, 8, "Sohail"]

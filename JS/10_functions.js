@@ -59,10 +59,20 @@
 
 // console.log(res);
 
-let arr = [5, 6, 2, 1, 101, 3];
+const arr = [5, 6, 2, 1, 101, 3];
 const output = arr.reduce((res, currVal) => {
 	return res > currVal ? res : currVal;
 });
 console.log(output);
+
+//We are given array of marks of students. Filter out the marks of students that scored 90+.
+// const marks = [87, 93, 64, 99, 86];
+// const studentMarks = [];
+// marks.filter((arr) => {
+// 	arr > 90 ? studentMarks.push(arr) : 0;
+// });
+// console.log(studentMarks);
+
+//Qs. Take a number n as input from user. Create an array of numbers from 1 to n. Use the reduce method to calculate sum of all numbers in the array. Use the reduce method to calculate product of all numbers in the array.
 
 //`
