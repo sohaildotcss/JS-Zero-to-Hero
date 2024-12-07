@@ -1,0 +1,29 @@
+<!-- Event handlers Doc:- https://developer.mozilla.org/en-US/docs/Web/API/Event -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Events handled in JS file have more priprity than inline event handlers -->
+		<!-- All these are inline event handlers -->
+		<button onclick="console.log('button is clicked');alert('hellooo')">
+			Click me
+		</button>
+		<button ondblclick="console.log('clicked 2 times')">
+			Click me 2 times.
+		</button>
+		<div onmouseover="console.log('movement detected!')" onCop>
+			<h6>This is a box</h6>
+		</div>
+		<!--  -->
+
+		<button id="submitBtn">Submit</button>
+		<div id="textBox"></div>
+		<script src="script.js"></script>
+	</body>
+</html>
