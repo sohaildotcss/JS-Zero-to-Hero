@@ -7,8 +7,7 @@ submitBtn.onclick = () => {
 	console.log(a);
 };
 submitBtn.onclick = () => {
-    console.log("Event fired 2");
-    
+	console.log("Event fired 2");
 };
 let textBox = document.querySelector("#textBox");
 textBox.onmouseover = () => {
@@ -16,3 +15,20 @@ textBox.onmouseover = () => {
 };
 
 //If same event is added to the same element, then only last one will be executed.
+
+// Event Objects in JS
+// Event object is passed as an argument to the event handler function and it contains all the information about the event. It is used to get the information about the event like type of event, target element, mouse position, etc.
+
+let ptag = document.querySelector("#ptag");
+ptag.onclick = (e) => {
+	console.log(e.type);
+	console.log(e.target);
+	console.log(e.clientX, e.clientY);
+};
+
+ptag.onmouseover = (e) => {
+	console.log(e);
+	console.log(e.type);
+	console.log(e.target);
+	console.log(e.clientX, e.clientY);
+};

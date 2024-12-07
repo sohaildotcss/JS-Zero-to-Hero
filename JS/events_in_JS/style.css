@@ -14,5 +14,12 @@ div {
 	width: 100px;
 	height: 100px;
 	background-color: wheat;
-    margin: 20px;
+	margin: 20px;
+}
+
+p {
+	margin: 20px;
+	background-color: skyblue;
+	padding: 10px;
+	display: inline;
 }
