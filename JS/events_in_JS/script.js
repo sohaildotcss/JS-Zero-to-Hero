@@ -32,3 +32,11 @@ ptag.onmouseover = (e) => {
 	console.log(e.target);
 	console.log(e.clientX, e.clientY);
 };
+
+// addEventListener
+// addEventListener() is used to add an event listener to an element. we can write multiple event listeners for the same event on the same element which we cant do with inline event handlers.
+
+let btn = document.querySelector("#btn");
+btn.addEventListener("click", () => {
+	console.log("Add event listener is working");
+});
