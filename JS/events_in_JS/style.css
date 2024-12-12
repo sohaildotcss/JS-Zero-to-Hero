@@ -23,3 +23,14 @@ p {
 	padding: 10px;
 	display: inline;
 }
+
+.dark {
+	background-color: black;
+	color: white;
+}
+
+.light {
+	background-color: white;
+	color: black;
+	
+}
