@@ -11,6 +11,7 @@ let winPatterns = [
 	[2, 4, 6], //diagonal
 ];
 
+//turns between player 1 and player 2
 let initialPlayer = "cross";
 boxes.forEach((box) => {
 	box.addEventListener("click", () => {
@@ -53,7 +54,7 @@ const disableButtons = () => {
 	}
 };
 
-//reset game
+//reset the game
 let resetBtn = document.querySelector("#reset-button");
 resetBtn.addEventListener("click", () => {
 	location.reload();
