@@ -20,6 +20,7 @@ boxes.forEach((box) => {
 			initialPlayer = "circle";
 			box.disabled = "true";
 			box.style.color = "#758bfd";
+			resetBtn.innerText = "Reset Game";
 		} else {
 			box.innerHTML = "O";
 			initialPlayer = "cross";
