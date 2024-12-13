@@ -1,3 +1,15 @@
+//todo:-
+// 1.Important Practice Problem - (Solution Code is given in the Description Box)
+// Implement the logic for "Draw" condition.
+// You have to track when the game has no winner.
+// In this case, print a different message in the msg <p>.
+// Hint - Use a new variable count, which counts button clicks.
+// When the total count reaches 9 but Game has no winners,
+// that means the Game was a Draw.
+
+//2. Solve:- https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/description/
+
+
 let boxes = document.querySelectorAll(".box");
 let winnerText = document.querySelector("#winner-text");
 let winPatterns = [
