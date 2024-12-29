@@ -8,8 +8,18 @@ const student = {
 		console.log(this.name); //this refers to the current object, in this case it's like student.name
 	}, // method
 };
-student.marks;
-student.printDetails();
+student.marks; // accessing properties from an object.
+student.printDetails(); // accessing method/function from an object
+
+// Methods to write functions in objects. both behave like same.
+const test = {
+	movie1: function () {
+		console.log("Movie1");
+	},
+	movie2() {
+		console.log("Movie2");
+	},
+};
 
 //JS objects have a special property called prototype. Its like an object inside every object.The inbuilt features of objects comes from prototype.
 // The same happens with arrays, functions, etc. They have their own prototype.
@@ -24,19 +34,10 @@ const marksDisplay = {
 	},
 };
 student.__proto__ = marksDisplay; // creates a protoype in student object which includes marksDisplay object.
-
-// Methods to write functions in objects. both behave like same.
-const test = {
-	movie1: function () {
-		console.log("Movie1");
-	},
-	movie2() {
-		console.log("Movie2");
-	},
-};
+// here marksDisplay becomes prototype and will be added to student as a prototype
 
 //If object & prototype have same method, object's method will be used.
-//If clash happens between object and prototype the object wins
+//If clash happens between object and prototype the object wins.
 const employee = {
 	tax() {
 		console.log("10%");
@@ -49,5 +50,6 @@ const manager = {
 	},
 };
 
-employee.__proto__ = manager;
-console.log(employee.tax()); // 20%. here object method is used which is employee.
+employee.__proto__ = manager; // here manager becomes prototype and will be added to employee as a prototype
+console.log(employee.tax()); // 10%. here object method/function is used which is employee.
+
