@@ -36,7 +36,7 @@ const marksDisplay = {
 student.__proto__ = marksDisplay; // creates a protoype in student object which includes marksDisplay object.
 // here marksDisplay becomes prototype and will be added to student as a prototype
 
-//If object & prototype have same method, object's method will be used.
+//If object & prototype have same method, then object's method will be used.
 //If clash happens between object and prototype the object wins.
 const employee = {
 	tax() {
@@ -52,4 +52,3 @@ const manager = {
 
 employee.__proto__ = manager; // here manager becomes prototype and will be added to employee as a prototype
 console.log(employee.tax()); // 10%. here object method/function is used which is employee.
-
