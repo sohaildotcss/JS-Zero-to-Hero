@@ -41,3 +41,21 @@ class Company {
 
 let google = new Company("50k", 10); //this will create constructor.
 let uber = new Company("40k", 7); //this will create constructor.
+
+class Parent {
+	test() {
+		console.log("This is a parent");
+	}
+}
+
+let child = new Parent();
+
+class Parent {
+	test() {
+		console.log("This is a parent");
+	}
+}
+
+class Child extends Parent{
+	
+}
