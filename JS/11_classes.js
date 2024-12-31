@@ -42,13 +42,7 @@ class Company {
 let google = new Company("50k", 10); //this will create constructor.
 let uber = new Company("40k", 7); //this will create constructor.
 
-class Parent {
-	test() {
-		console.log("This is a parent");
-	}
-}
-
-let child = new Parent();
+//* Inheritance
 
 class Parent {
 	test() {
@@ -56,6 +50,31 @@ class Parent {
 	}
 }
 
-class Child extends Parent{
-	
+class Child extends Parent {}
+
+let myNew = new Child();
+myNew.test();
+
+//`Practise````````````````````````````````````````````````````````````````````````
+//1. Create a Student class with properties name and grade.
+// 2. Add a method introduce() that prints: Hi, I'm [name] and I got a grade of [grade].
+// 3. Create an object and call the method.
+class Student {
+	constructor(name, grade) {
+		this.name = name;
+		this.grade = grade;
+	}
+	introduce() {
+		console.log(`Hi iam ${this.name} and i got grade of ${this.grade}`);
+	}
 }
+class Student1 extends Student {
+	bye() {
+		console.log(`Bye from ${this.name}`);
+	}
+}
+let sohail = new Student1("Sohail", 7);
+sohail.introduce();
+sohail.bye();
+
+//```````````````````````````````````````````````````````````````````````````````````````/
