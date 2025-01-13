@@ -77,4 +77,30 @@ let sohail = new Student1("Sohail", 7);
 sohail.introduce();
 sohail.bye();
 
+//I have used inheritance just for practise, we can solve the question without inheritance also.
 //```````````````````````````````````````````````````````````````````````````````````````/
+
+//* Method-Overriding
+
+//If Child & Parent have same method, child's method will be used.
+class Person {
+	eat() {
+		console.log("eat");
+	}
+	sleep() {
+		console.log("sleep");
+	}
+	work() {
+		console.log("work");
+	}
+}
+
+class Engineer extends Person {
+	work() {
+		console.log("iam a engineer");
+	}
+}
+
+let newEnginner = new Engineer();
+
+newEnginner.work(); //O:-iam a engineer, here child's will be called by overrriding parent's method
