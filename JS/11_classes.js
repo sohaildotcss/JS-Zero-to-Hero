@@ -43,7 +43,7 @@ let google = new Company("50k", 10); //this will create constructor.
 let uber = new Company("40k", 7); //this will create constructor.
 
 //* Inheritance
-
+// Child will inherit all properties of parent including constructors.
 class Parent {
 	test() {
 		console.log("This is a parent");
@@ -103,4 +103,41 @@ class Engineer extends Person {
 
 let newEnginner = new Engineer();
 
-newEnginner.work(); //O:-iam a engineer, here child's will be called by overrriding parent's method
+newEnginner.work(); //o/p:-iam a engineer, here child's will be called by overrriding parent's method
+
+//* Super Keyword
+//The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+//We cannot create constructors in child class without calling super() keyword
+//Must call super constructor in child/derived class before accessing 'this' or exiting from derived constructor.
+class Person1 {
+	constructor(name) {
+		console.log("Entered in parent constructor");
+		this.name = name;
+		this.species = "homo sapiens";
+		console.log("Exited from parent constructor");
+	}
+	eat() {
+		console.log("eat");
+	}
+}
+
+class Engineer1 extends Person1 {
+	constructor(name, branch) {
+		console.log("Entered in child constructor");
+		super(name); // comment this line to see the error
+		//in order to pass any value to parent class from child class we have to use super keyword.
+		this.branch = branch;
+		console.log(name, branch, "This is a child constructor");
+		console.log("Exited from child constructor");
+	}
+	work() {
+		super.eat(); //we can inherit methods from parent class to children class using super keyword.
+		console.log("iam a engineer");
+	}
+}
+
+let newEng = new Engineer1("sohail", "chemical");
+
+//Execution Flow:- 125 --> 126 --> 127 --> 114,115,116,117 --> 129 --> 130....so on
+
+
