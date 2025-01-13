@@ -56,7 +56,7 @@ let myNew = new Child();
 myNew.test();
 
 //`Practise````````````````````````````````````````````````````````````````````````
-//1. Create a Student class with properties name and grade.
+// 1. Create a Student class with properties name and grade.
 // 2. Add a method introduce() that prints: Hi, I'm [name] and I got a grade of [grade].
 // 3. Create an object and call the method.
 class Student {
@@ -140,4 +140,29 @@ let newEng = new Engineer1("sohail", "chemical");
 
 //Execution Flow:- 125 --> 126 --> 127 --> 114,115,116,117 --> 129 --> 130....so on
 
+//`Practise````````````````````````````````````````````````````````````````````````
+// Qs. You are creating a website for your college. Create a class User with 2 properties, name & email. It also has a method called viewData() that allows user to view website data.
+// Qs. Create a new class called Admin which inherits from User. Add a new method called editData to Admin that allows it to edit website data.
+class User {
+	constructor(name, email) {
+		this.name = name;
+		this.email = email;
+	}
+	viewData(data) {
+		this.data = data;
+		console.log(data, "website data viewed");
+	}
+}
 
+class Admin extends User {
+	constructor(name, email) {
+		super(name, email);
+	}
+	editData(data) {
+		super.viewData(data);
+		console.log(data);
+	}
+}
+
+let user1 = new Admin("sohail", "sohail@abc.com");
+user1.editData("new data");
