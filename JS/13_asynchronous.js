@@ -25,3 +25,38 @@ console.log("five");
 // This is called asynchronous programming.
 //! When the compiler hits line.18 then the timer of 4sec will start
 //! and after 4sec the compiler will hit line.19
+
+function getData(dataId, getNextData) {
+	setTimeout(() => {
+		console.log("data", dataId);
+		if (getNextData) {
+			getNextData();
+		}
+	}, 2000);
+}
+getData(1, () => {
+	getData(2);
+});
+
+// How it works:
+// First call to getData(1, ...):
+// dataId = 1 is passed.
+// A 2-second delay is simulated using setTimeout.
+// After 2 seconds, it logs:
+// data 1
+
+// Then it calls getNextData, which is the callback function:
+// () => { getData(2); }
+
+// Second call to getData(2):
+// This call runs similarly, but with dataId = 2.
+// Again, after 2 seconds, it logs:
+// data 2
+
+// Final Output:
+// After a total of 4 seconds, you get the output:
+// data 1
+// data 2
+
+
+//! Callbacks continuation in 14_promises.js
