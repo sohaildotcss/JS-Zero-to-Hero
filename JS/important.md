@@ -21,3 +21,9 @@ From 07\_ are ApnaCollege lectures, before ones are from HC
 - Master all String Instance Methods.
 - Master Map, Filter, Reduce, and Sort.
 - Study Type Coercion
+
+
+# Questions:
+
+- When to use try and catch block?
+- When to use async and await?
