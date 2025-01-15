@@ -38,7 +38,7 @@
 //! Nested callbacks stacked below one another forming a pyramid structure.
 //! This style of programming becomes difficult to understand & manage.
 
-//To solve this callback hell, Promise are used
+//To solve this callback hell, Promise are used (this callback hell is  exactly solved with promise chaining in line.134)
 
 //* Promise
 // Promise is an object and have 3 states:-
@@ -65,7 +65,6 @@ function fun(data) {
 }
 let sam = fun(1); //promise returned by func is stored in a variable
 
-
 //! In general we don't create any promises, Promises are returned by api's and
 //! we just store them in a variable and perform required operations. (as shown in above)
 
@@ -88,14 +87,66 @@ let storedData = apiCall(); //promise is being stored in a variable
 
 // If the above promise is fulfilled then automatically the below code block will be executed .
 storedData.then((res) => {
-	console.log(res, "Promise resolved"); //.then() comes with default parameter, "res"(we can name it anything) in which the already passed down resolve message is stored. ref:line.82
+	console.log(res, "Promise resolved"); //? .then() comes with default parameter, "res"(we can name it anything) in which the already passed down resolve message is stored. ref:line.82
 });
 
 // Similiarly, if the above promise(line.79) is rejected then automatically the below code block will be executed.
 storedData.catch((err) => {
-	console.log(err, "Error occurred"); //.catch() also comes with default parameter, "err"(we can name it anything) in which the already passed down reject message is stored. ref:line.83
+	console.log(err, "Error occurred"); //? .catch() also comes with default parameter, "err"(we can name it anything) in which the already passed down reject message is stored. ref:line.83
 });
 
 //! From resolve() and reject() only one will be executed everytime, not both.
 
 //* Promise Chaining:-
+console.log("fetching data 1.....");
+function practise(a) {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			console.log(a);
+			resolve("resolved");
+		}, 4000);
+	});
+}
+
+function practise1(b) {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			console.log(b);
+			resolve("success");
+			// reject("error occurred");
+		}, 2000);
+	});
+}
+
+practise("data 1").then(() => {
+	console.log("fetching data 2.....");
+	practise1("data 2")
+		.then((res) => {
+			console.log("data 2 received");
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+	//we can also write a catch here in order to catch error if the promise is reject
+});
+
+//Promise Chaining Example:-
+function userId(getId) {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			console.log(getId);
+			resolve();
+		}, 2000);
+	});
+}
+
+userId(1)
+	.then((res) => {
+		return userId(2);
+	})
+	.then((res) => {
+		return userId(3);
+	})
+	.then((res) => {
+		return userId(4);
+	});
