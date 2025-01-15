@@ -58,5 +58,47 @@ getData(1, () => {
 // data 1
 // data 2
 
+// function getData(data, getNextData) {
+// 	setTimeout(() => {
+// 		console.log(data);
+// 		if (getNextData) {
+// 			getNextData();
+// 		}
+// 	}, 2000);
+// }
 
-//! Callbacks continuation in 14_promises.js
+// getData(1, () => {
+// 	getData(2);
+// });
+
+// we will get data 1 after 2sec and then after 2sec we will get data 2.
+// Similiarly we can get further data if we want using nested callbacks as shown below
+
+//* Callback Hell
+// function getData(data, getNextData) {
+// 	setTimeout(() => {
+// 		console.log(data);
+// 		if (getNextData) {
+// 			getNextData();
+// 		}
+// 	}, 2000);
+// }
+
+// getData(1, () => {
+// 	getData(2, () => {
+// 		getData(3, () => {
+// 			getData(4, () => {
+// 				getData(5);
+// 			});
+// 		});
+// 	});
+// });
+
+//! This is called Callback hell, where the callbacks are nested inside callbacks.
+//! Nested callbacks stacked below one another forming a pyramid structure.
+//! This style of programming becomes difficult to understand & manage.
+
+//To solve this complex looking callback hell, Promises were introduced.
+// (this callback hell problem is exactly solved with promise chaining in 14_promises.js-line.91)
+
+//? continuation in 14_promises.js

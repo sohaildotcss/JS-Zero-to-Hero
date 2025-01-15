@@ -1,45 +1,3 @@
-// function getData(data, getNextData) {
-// 	setTimeout(() => {
-// 		console.log(data);
-// 		if (getNextData) {
-// 			getNextData();
-// 		}
-// 	}, 2000);
-// }
-
-// getData(1, () => {
-// 	getData(2);
-// });
-
-// we will get data 1 after 2sec and then after 2sec we will get data 2.
-// Similiarly we can get further data if we want using nested callbacks as shown below
-
-//* Callback Hell
-// function getData(data, getNextData) {
-// 	setTimeout(() => {
-// 		console.log(data);
-// 		if (getNextData) {
-// 			getNextData();
-// 		}
-// 	}, 2000);
-// }
-
-// getData(1, () => {
-// 	getData(2, () => {
-// 		getData(3, () => {
-// 			getData(4, () => {
-// 				getData(5);
-// 			});
-// 		});
-// 	});
-// });
-
-//! This is called Callback hell, where the callbacks are nested inside callbacks.
-//! Nested callbacks stacked below one another forming a pyramid structure.
-//! This style of programming becomes difficult to understand & manage.
-
-//To solve this callback hell, Promise are used (this callback hell is  exactly solved with promise chaining in line.134)
-
 //* Promise
 // Promise is an object and have 3 states:-
 // Pending: the result is undefined
@@ -87,12 +45,12 @@ let storedData = apiCall(); //promise is being stored in a variable
 
 // If the above promise is fulfilled then automatically the below code block will be executed .
 storedData.then((res) => {
-	console.log(res, "Promise resolved"); //? .then() comes with default parameter, "res"(we can name it anything) in which the already passed down resolve message is stored. ref:line.82
+	console.log(res, "Promise resolved"); //? .then() comes with default parameter, "res"(we can name it anything) in which the already passed down resolve message is stored. ref:line.40
 });
 
-// Similiarly, if the above promise(line.79) is rejected then automatically the below code block will be executed.
+// Similiarly, if the above promise(line.44) is rejected then automatically the below code block will be executed.
 storedData.catch((err) => {
-	console.log(err, "Error occurred"); //? .catch() also comes with default parameter, "err"(we can name it anything) in which the already passed down reject message is stored. ref:line.83
+	console.log(err, "Error occurred"); //? .catch() also comes with default parameter, "err"(we can name it anything) in which the already passed down reject message is stored. ref:line.41
 });
 
 //! From resolve() and reject() only one will be executed everytime, not both.
@@ -150,3 +108,6 @@ userId(1)
 	.then((res) => {
 		return userId(4);
 	});
+
+//To solve this complex looking Promise chaining Async/Await were introduced
+//? continuation in 15_async-await.js
